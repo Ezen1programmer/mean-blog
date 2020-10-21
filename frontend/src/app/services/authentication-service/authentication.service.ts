@@ -10,8 +10,9 @@ export interface LoginForm {
 export interface User {
   name?: string;
   username?: string;
-  emai?: string;
+  email?: string;
   password?: string;
+  role?:string;
 }
 
 @Injectable({
