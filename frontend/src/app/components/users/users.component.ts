@@ -13,6 +13,7 @@ export class UsersComponent implements OnInit {
   dataSource: UserData = null;
   pageEvent: PageEvent;
   displayedColumns: string[] = ['id', 'name', 'username', 'email', 'role'];
+  filterValue: string = null;
 
   constructor(private userService: UserService) { }
 
@@ -27,16 +28,30 @@ export class UsersComponent implements OnInit {
     ).subscribe();
   }
 
+
   onPaginateChange(event: PageEvent) {
     let page = event.pageIndex;
     let size = event.pageSize;
 
-    page = page +1;
 
-    this.userService.findAll(page, size).pipe(
+    if(this.filterValue == null) {
+      page = page +1;
+      this.userService.findAll(page, size).pipe(
+        map((userData: UserData) => this.dataSource = userData)
+      ).subscribe();
+    } else {
+      this.userService.paginateByName(page, size, this.filterValue).pipe(
+        map((userData: UserData) => this.dataSource = userData)
+      ).subscribe()
+    }
+
+  }
+
+  findByName(username: string) {
+    console.log(username);
+    this.userService.paginateByName(0, 10, username).pipe(
       map((userData: UserData) => this.dataSource = userData)
-    ).subscribe();
-
+    ).subscribe()
   }
 
 }

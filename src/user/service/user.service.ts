@@ -1,5 +1,5 @@
 import {Injectable} from '@nestjs/common';
-import {Repository} from 'typeorm';
+import {Like, Repository} from 'typeorm';
 import {UserEntity} from '../model/user.entity';
 import {InjectRepository} from '@nestjs/typeorm';
 import {User, UserRole} from '../model/user.interface';
@@ -14,7 +14,8 @@ export class UserService {
     constructor(
         @InjectRepository(UserEntity) private readonly userRepository: Repository<UserEntity>,
         private authService: AuthService
-    ) {}
+    ) {
+    }
 
     create(user: User): Observable<User> {
         return this.authService.hashPassword(user.password).pipe(
@@ -42,29 +43,64 @@ export class UserService {
             map((user: User) => {
                 const {password, ...result} = user;
                 return result;
-            } )
+            })
         )
     }
 
     findAll(): Observable<User[]> {
         return from(this.userRepository.find()).pipe(
             map((users: User[]) => {
-                users.forEach(function (v) {delete v.password});
+                users.forEach(function (v) {
+                    delete v.password
+                });
                 return users;
             })
         );
     }
 
-     paginate(options: IPaginationOptions): Observable<Pagination<User>> {
+    paginate(options: IPaginationOptions): Observable<Pagination<User>> {
         return from(paginate<User>(this.userRepository, options)).pipe(
-            map((userPageable:Pagination<User>)=>{
-                userPageable.items.forEach(function (v) {delete v.password})
-
-                return userPageable
+            map((usersPageable: Pagination<User>) => {
+                usersPageable.items.forEach(function (v) {
+                    delete v.password
+                });
+                return usersPageable;
             })
         )
-     }
+    }
 
+    paginateFilterByUsername(options: IPaginationOptions, user: User): Observable<Pagination<User>> {
+        console.log(options);
+        return from(this.userRepository.findAndCount({
+            skip: options.page * options.limit || 0,
+            take: options.limit || 10,
+            order: {id: "ASC"},
+            select: ['id', 'name', 'username', 'email', 'role'],
+            where: [
+                {username: Like(`%${user.username}%`)}
+            ]
+        })).pipe(
+            map(([users, totalUsers]) => {
+                const usersPageable: Pagination<User> = {
+                    items: users,
+                    links: {
+                        first: options.route + `?limit=${options.limit}`,
+                        previous: options.route + ``,
+                        next: options.route + `?limit=${options.limit}&page=${options.page + 1}`,
+                        last: options.route + `?limit=${options.limit}&page=${Math.ceil(totalUsers / options.limit)}`
+                    },
+                    meta: {
+                        currentPage: options.page,
+                        itemCount: users.length,
+                        itemsPerPage: options.limit,
+                        totalItems: totalUsers,
+                        totalPages: Math.ceil(totalUsers / options.limit)
+                    }
+                };
+                return usersPageable;
+            })
+        )
+    }
 
 
     deleteOne(id: number): Observable<any> {
@@ -76,7 +112,9 @@ export class UserService {
         delete user.password;
         delete user.role;
 
-        return from(this.userRepository.update(id, user));
+        return from(this.userRepository.update(id, user)).pipe(
+            switchMap(() => this.findOne(id))
+        );
     }
 
     updateRoleOfUser(id: number, user: User): Observable<any> {
@@ -86,7 +124,7 @@ export class UserService {
     login(user: User): Observable<string> {
         return this.validateUser(user.email, user.password).pipe(
             switchMap((user: User) => {
-                if(user) {
+                if (user) {
                     return this.authService.generateJWT(user).pipe(map((jwt: string) => jwt));
                 } else {
                     return 'Wrong Credentials';
@@ -99,7 +137,7 @@ export class UserService {
         return this.findByMail(email).pipe(
             switchMap((user: User) => this.authService.comparePasswords(password, user.password).pipe(
                 map((match: boolean) => {
-                    if(match) {
+                    if (match) {
                         const {password, ...result} = user;
                         return result;
                     } else {

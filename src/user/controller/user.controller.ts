@@ -5,27 +5,49 @@ import {
     Get,
     Param,
     Post,
-    Put, Query, UseGuards,
+    Put, Query, UploadedFile, UseGuards, UseInterceptors,Request, Res
 } from '@nestjs/common';
 import {UserService} from '../service/user.service';
 import {Observable, of} from 'rxjs';
 import {User, UserRole} from '../model/user.interface';
-import {catchError, map} from "rxjs/operators";
+import {catchError, map, tap} from "rxjs/operators";
 import {hasRoles} from "../../auth/decorators/roles.decorator";
 import {JwtAuthGuard} from "../../auth/guards/jwt-guard";
 import {RolesGuard} from "../../auth/guards/roles.guard";
 import {Pagination} from "nestjs-typeorm-paginate";
+import {FileInterceptor} from "@nestjs/platform-express";
+import { diskStorage } from  'multer';
+import { v4 as uuidv4 } from 'uuid';
+import { join } from 'path';
+const path = require('path');
+
+
+export const storage = {
+    storage: diskStorage({
+        destination: './uploads/profileimages',
+        filename: (req, file, cb) => {
+            const filename: string = path.parse(file.originalname).name.replace(/\s/g, '') + uuidv4();
+            const extension: string = path.parse(file.originalname).ext;
+
+            cb(null, `${filename}${extension}`)
+        }
+    })
+
+}
+
 
 @Controller('users')
 export class UserController {
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService) {
+    }
+
 
     @Post()
     create(@Body() user: User): Observable<User | Object> {
         return this.userService.create(user).pipe(
             map((user: User) => user),
-            catchError(err => of({ error: err.message }))
+            catchError(err => of({error: err.message}))
         );
     }
 
@@ -33,7 +55,7 @@ export class UserController {
     login(@Body() user: User): Observable<Object> {
         return this.userService.login(user).pipe(
             map((jwt: string) => {
-                return { access_token: jwt };
+                return {access_token: jwt};
             })
         )
     }
@@ -45,10 +67,25 @@ export class UserController {
 
 
     @Get()
-    index( @Query('page') page: number = 1,
-           @Query('limit') limit: number = 10,): Observable<Pagination<User>> {
+    index(
+        @Query('page') page: number = 1,
+        @Query('limit') limit: number = 10,
+        @Query('username') username: string
+    ): Observable<Pagination<User>> {
         limit = limit > 100 ? 100 : limit;
-        return this.userService.paginate({page:Number(page), limit: Number(limit), route: 'http://localhost:3000/users'});
+
+        if (username === null || username === undefined) {
+            return this.userService.paginate({
+                page: Number(page),
+                limit: Number(limit),
+                route: 'http://localhost:3000/api/users'
+            });
+        } else {
+            return this.userService.paginateFilterByUsername(
+                {page: Number(page), limit: Number(limit), route: 'http://localhost:3000/api/users'},
+                {username}
+            )
+        }
     }
 
     @Delete(':id')
@@ -67,4 +104,24 @@ export class UserController {
     updateRoleOfUser(@Param('id') id: string, @Body() user: User): Observable<User> {
         return this.userService.updateRoleOfUser(Number(id), user);
     }
+
+    @UseGuards(JwtAuthGuard)
+    @Post('upload')
+    @UseInterceptors(FileInterceptor('file', storage))
+    uploadFile(@UploadedFile() file, @Request() req): Observable<Object> {
+
+        const user: User = req.user.user;
+
+        return this.userService.updateOne(user.id, {profileImage: file.filename}).pipe(
+            tap((user: User) => console.log(user)),
+            map((user: User) => ({profileImage: user.profileImage}))
+        )
+    }
+
+    @Get('profile-image/:imagename')
+    findProfileImage(@Param('imagename') imagename, @Res() res): Observable<Object> {
+        return of(res.sendFile(join(process.cwd(), 'uploads/profileimages/' + imagename)));
+    }
+
+
 }
