@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="Guard for PUT Request, verify UserIsUser">
+      <change afterPath="$PROJECT_DIR$/.idea/NEWblog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog" beforeDir="false" afterPath="$PROJECT_DIR$/blog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blog" />
+  </component>
+  <component name="ProjectId" id="1jvaEcpOfPamwZBXEJugvGfupgC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Blog-with-NestJS-and-Angular" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="E:\project\NEWblog\blog\frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/blog/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/blog/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start:dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="" />
+      <created>1604686908639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604686908639</updated>
+      <workItem from="1604686911227" duration="153000" />
+      <workItem from="1605679154215" duration="10742000" />
+      <workItem from="1605785612107" duration="6151000" />
+    </task>
+    <task id="LOCAL-00001" summary="upload and search profile image">
+      <created>1605730783656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605730783657</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Guard for PUT Request, verify UserIsUser">
+      <created>1605791539780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605791539780</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upload and search profile image" />
+    <MESSAGE value="Guard for PUT Request, verify UserIsUser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Guard for PUT Request, verify UserIsUser" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1290" y="281" key="FileChooserDialogImpl" timestamp="1605796468933">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state x="1290" y="281" key="FileChooserDialogImpl/0.0.2048.1050@0.0.2048.1050" timestamp="1605796468933" />
+    <state width="1201" height="283" key="GridCell.Tab.0.bottom" timestamp="1605796815318">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state width="1201" height="283" key="GridCell.Tab.0.bottom/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815318" />
+    <state width="1201" height="283" key="GridCell.Tab.0.center" timestamp="1605796815317">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state width="1201" height="283" key="GridCell.Tab.0.center/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815317" />
+    <state width="1201" height="283" key="GridCell.Tab.0.left" timestamp="1605796815316">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state width="1201" height="283" key="GridCell.Tab.0.left/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815316" />
+    <state width="1201" height="283" key="GridCell.Tab.0.right" timestamp="1605796815318">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state width="1201" height="283" key="GridCell.Tab.0.right/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815318" />
+    <state x="1013" y="271" key="Vcs.Push.Dialog.v2" timestamp="1605791566728">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state x="1013" y="271" key="Vcs.Push.Dialog.v2/0.0.2048.1050@0.0.2048.1050" timestamp="1605791566728" />
+    <state x="1307" y="409" width="348" height="298" key="org.angular.cli.generate" timestamp="1605794242173">
+      <screen x="0" y="0" width="2048" height="1050" />
+    </state>
+    <state x="1307" y="409" width="348" height="298" key="org.angular.cli.generate/0.0.2048.1050@0.0.2048.1050" timestamp="1605794242173" />
+  </component>
+</project>
