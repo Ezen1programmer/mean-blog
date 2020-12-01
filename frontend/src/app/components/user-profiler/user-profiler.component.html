@@ -1,0 +1,21 @@
+<div *ngIf="user" class="main-div">
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <span *ngIf="user.profileImage;else photo">
+           <img src="http://localhost:3000/api/users/profile-image/{{user.profileImage}}" class="header-image">
+        </span>
+        <ng-template #photo>
+          <img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png" alt="userPhoto"  class="header-image">
+        </ng-template>
+
+      </div>
+      <mat-card-title>{{user.name}}</mat-card-title>
+      <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Username: {{user.username}}</p>
+      <p>Role: {{user.role}}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
