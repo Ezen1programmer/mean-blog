@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="Guard for PUT Request, verify UserIsUser">
-      <change afterPath="$PROJECT_DIR$/.idea/NEWblog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="simple Auth Guard &amp; Simple JWT Interceptor">
+      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog" beforeDir="false" afterPath="$PROJECT_DIR$/blog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/interseptors/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/interseptors/jwt.interceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/services/user-service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/services/user-service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/auth/guards/UserIsUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/auth/guards/UserIsUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/src/user/controller/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/user/controller/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +37,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="master" />
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/blog" value="push_github" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blog" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1jvaEcpOfPamwZBXEJugvGfupgC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -60,11 +68,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Blog-with-NestJS-and-Angular" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="E:\project\NEWblog\blog\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -92,8 +104,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.start:dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +119,10 @@
       <updated>1604686908639</updated>
       <workItem from="1604686911227" duration="153000" />
       <workItem from="1605679154215" duration="10742000" />
-      <workItem from="1605785612107" duration="6151000" />
+      <workItem from="1605785612107" duration="10343000" />
+      <workItem from="1605860694357" duration="5820000" />
+      <workItem from="1605884732685" duration="1000" />
+      <workItem from="1606824821868" duration="4992000" />
     </task>
     <task id="LOCAL-00001" summary="upload and search profile image">
       <created>1605730783656</created>
@@ -123,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605791539780</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="simple Auth Guard &amp; Simple JWT Interceptor">
+      <created>1605796872779</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605796872779</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +154,31 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/blog" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -139,41 +186,17 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upload and search profile image" />
     <MESSAGE value="Guard for PUT Request, verify UserIsUser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Guard for PUT Request, verify UserIsUser" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1290" y="281" key="FileChooserDialogImpl" timestamp="1605796468933">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state x="1290" y="281" key="FileChooserDialogImpl/0.0.2048.1050@0.0.2048.1050" timestamp="1605796468933" />
-    <state width="1201" height="283" key="GridCell.Tab.0.bottom" timestamp="1605796815318">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state width="1201" height="283" key="GridCell.Tab.0.bottom/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815318" />
-    <state width="1201" height="283" key="GridCell.Tab.0.center" timestamp="1605796815317">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state width="1201" height="283" key="GridCell.Tab.0.center/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815317" />
-    <state width="1201" height="283" key="GridCell.Tab.0.left" timestamp="1605796815316">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state width="1201" height="283" key="GridCell.Tab.0.left/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815316" />
-    <state width="1201" height="283" key="GridCell.Tab.0.right" timestamp="1605796815318">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state width="1201" height="283" key="GridCell.Tab.0.right/0.0.2048.1050@0.0.2048.1050" timestamp="1605796815318" />
-    <state x="1013" y="271" key="Vcs.Push.Dialog.v2" timestamp="1605791566728">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state x="1013" y="271" key="Vcs.Push.Dialog.v2/0.0.2048.1050@0.0.2048.1050" timestamp="1605791566728" />
-    <state x="1307" y="409" width="348" height="298" key="org.angular.cli.generate" timestamp="1605794242173">
-      <screen x="0" y="0" width="2048" height="1050" />
-    </state>
-    <state x="1307" y="409" width="348" height="298" key="org.angular.cli.generate/0.0.2048.1050@0.0.2048.1050" timestamp="1605794242173" />
+    <MESSAGE value="simple Auth Guard &amp; Simple JWT Interceptor" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple Auth Guard &amp; Simple JWT Interceptor" />
   </component>
 </project>
