@@ -76,6 +76,7 @@ export class UserService {
             take: options.limit || 10,
             order: {id: "ASC"},
             select: ['id', 'name', 'username', 'email', 'role'],
+            relations: ['blogEntries'],
             where: [
                 {username: Like(`%${user.username}%`)}
             ]
