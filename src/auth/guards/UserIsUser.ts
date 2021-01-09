@@ -1,13 +1,14 @@
-import { Injectable, CanActivate, Inject, forwardRef, ExecutionContext } from "@nestjs/common";
-import { Observable } from "rxjs";
-import { UserService } from "src/user/service/user.service";
+import {Injectable, CanActivate, Inject, forwardRef, ExecutionContext} from "@nestjs/common";
+import {Observable} from "rxjs";
+import {UserService} from "src/user/service/user.service";
 
-import { map } from "rxjs/operators";
+import {map} from "rxjs/operators";
 import {User} from "../../user/model/user.interface";
 
 
 @Injectable()
-export class UserIsUserGuard implements CanActivate{
+export class UserIsUserGuard implements CanActivate {
+
 
     constructor(
         @Inject(forwardRef(() => UserService))
@@ -26,7 +27,7 @@ export class UserIsUserGuard implements CanActivate{
             map((user: User) => {
                 let hasPermission = false;
 
-                if(user.id === Number(params.id)) {
+                if (user.id === Number(params.id)) {
                     hasPermission = true;
                 }
 

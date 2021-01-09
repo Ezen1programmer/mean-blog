@@ -20,6 +20,8 @@ import { diskStorage } from  'multer';
 import { v4 as uuidv4 } from 'uuid';
 import { join } from 'path';
 import {UserIsUserGuard} from "../../auth/guards/UserIsUser";
+
+
 const path = require('path');
 
 
@@ -98,6 +100,7 @@ export class UserController {
     @UseGuards(JwtAuthGuard, UserIsUserGuard)
     @Put(':id')
     updateOne(@Param('id') id: string, @Body() user: User): Observable<any> {
+        console.log(user)
         return this.userService.updateOne(Number(id), user);
     }
 

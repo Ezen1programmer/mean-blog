@@ -19,6 +19,8 @@ import {UsersComponent} from "./components/users/users.component";
 import {UpdateUserProfileComponent} from './components/update-user-profile/update-user-profile.component';
 import {JwtHelperService, JWT_OPTIONS} from "@auth0/angular-jwt";
 import {JwtInterceptor} from "./interseptors/jwt.interceptor";
+import { UserProfilerComponent } from './components/user-profiler/user-profiler.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {JwtInterceptor} from "./interseptors/jwt.interceptor";
     LoginComponent,
     RegisterComponent,
     UsersComponent,
-    UpdateUserProfileComponent
+    UpdateUserProfileComponent,
+    UserProfilerComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import {JwtInterceptor} from "./interseptors/jwt.interceptor";
     MatButtonModule,
     MatSelectModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule
 
   ],
   providers: [
