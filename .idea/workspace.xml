@@ -5,25 +5,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="simple Auth Guard &amp; Simple JWT Interceptor">
-      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/user-profiler/user-profiler.component.ts" afterDir="false" />
+    <list default="true" id="5b078403-62bf-4a9e-a3b0-4eeeb85825b8" name="Default Changelist" comment="simple update user profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog" beforeDir="false" afterPath="$PROJECT_DIR$/blog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/update-user-profile/update-user-profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/components/users/users.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/interseptors/jwt.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/interseptors/jwt.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/services/authentication-service/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/frontend/src/app/services/user-service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/frontend/src/app/services/user-service/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/auth/guards/UserIsUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/auth/guards/UserIsUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/user/controller/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/user/controller/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +40,7 @@
         <entry key="$PROJECT_DIR$/blog" value="push_github" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/blog" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1jvaEcpOfPamwZBXEJugvGfupgC" />
@@ -70,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Blog-with-NestJS-and-Angular" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,7 +63,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="E:\project\NEWblog\blog\frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="E:\project\NEWblog\blog\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.start">
@@ -122,7 +107,11 @@
       <workItem from="1605785612107" duration="10343000" />
       <workItem from="1605860694357" duration="5820000" />
       <workItem from="1605884732685" duration="1000" />
-      <workItem from="1606824821868" duration="4992000" />
+      <workItem from="1606824821868" duration="5781000" />
+      <workItem from="1608036578329" duration="1011000" />
+      <workItem from="1608138874601" duration="47000" />
+      <workItem from="1608552656725" duration="242000" />
+      <workItem from="1610274499537" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="upload and search profile image">
       <created>1605730783656</created>
@@ -145,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605796872779</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="simple update user profile">
+      <created>1606830224602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606830224602</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +177,19 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="push_github" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -197,6 +205,7 @@
     <MESSAGE value="upload and search profile image" />
     <MESSAGE value="Guard for PUT Request, verify UserIsUser" />
     <MESSAGE value="simple Auth Guard &amp; Simple JWT Interceptor" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple Auth Guard &amp; Simple JWT Interceptor" />
+    <MESSAGE value="simple update user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple update user profile" />
   </component>
 </project>
